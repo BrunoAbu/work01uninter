@@ -1,0 +1,199 @@
+body {
+    background-color: rgb(136, 240, 240);
+}
+
+.nome {
+    color: rgb(12, 0, 144);
+    text-align: center;
+}
+
+h2, h3 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.biografia {
+    text-align: justify;
+    max-width: 1000px; 
+    margin: 0 auto 10px auto; 
+    font-size: 18px;
+}
+
+ul li {
+    
+    list-style: none;
+    padding-bottom: 15px;
+}
+
+.hobbies {
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    list-style: none;
+    padding-left: 0;
+}
+
+.lista-hobbies li {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.lista-hobbies li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+fieldset.borda {
+  width: 60%;         
+  margin: 20px auto;       
+}
+
+
+/* Ícones personalizados */
+.mergulho::before {
+  background-image: url("hobbies/mascara.png");
+}
+
+.futebol::before {
+  background-image: url("hobbies/futebol.png"); 
+}
+
+.videogame::before {
+  background-image: url("hobbies/videogame.png");
+}
+
+.mergulhador {
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 2px solid black;
+    height: 285px;
+    width: 230px;
+   }
+
+.paises {
+    text-align: center;
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    
+}
+.tabela {
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: #0051ff 3px solid;  
+    background-color: #66bbe6;
+}
+
+.tabela th, .tabela td {
+    border: 2px solid #0051ff;
+    padding: 10px;
+    text-align: center;
+}
+
+.tabela th {
+    background-color: #1c8491;
+    color: white;
+    font-size: 20px;
+}
+
+.tabela td {
+  font-weight: bold;
+}
+
+#botao {
+    cursor: pointer;
+    margin: 15px auto;
+    transition: transform 0.3s;
+    display: block;
+    width: 34%;
+    padding: 10px 15px;
+    border: 2px solid;
+    background-color: rgb(71, 178, 199);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    position: relative; 
+    overflow: visible;
+}
+
+#botao:hover {
+    transform: scale(1.05);
+}
+
+#botao:active {
+    transform: scale(0.95);
+}
+
+/* Estilo das bolhas */
+.bolha {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.7); /* bolhas brancas com transparência */
+    animation: subirBolha 2s forwards;
+}
+
+@keyframes subirBolha {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100px) scale(0.5);
+    }
+}
+
+
+@keyframes brilho {
+  0%, 100% {
+    color: #0069a1;
+    text-shadow: none;
+  }
+  50% {
+    color: #0051ff;
+    text-shadow: 0 0 8px #00eeff;
+  }
+}
+
+/* Segundo parágrafo com texto justificado */
+.fraselink {
+  text-align: justify;
+  max-width: 600px; 
+  margin: 0 auto 10px auto; 
+  font-size: 18px;
+}
+
+/* Link centralizado e estilizado */
+#linkmergulho {
+  display: block;          
+  width: max-content;      
+  margin: 0 auto;          
+  position: relative;      
+  padding: 8px 15px;
+  background-color: #479fc7;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: visible;
+}
+
+#linkmergulho:hover {
+  color: #235f67;
+}
+
+/* Bolhas */
+.bolha {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.7);
+  animation: subirBolha 2s forwards;
+  pointer-events: none; /* para não interferir no clique/hover */
+}
